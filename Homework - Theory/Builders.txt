@@ -1,0 +1,29 @@
+- Construtores e sobrecarga de construtores
+A instrução 'new' é usada na criação de objetos, que são instâncias de uma classe.
+Na POO é declarado um método com o mesmo nome da classe, chamado método construtor.
+O método construtor inicia o objeto e pode fazer isso das duas seguintes formas: 
+Forma padrão que cria o objeto com seus atributos numéricos valendo zero e Strings como 'null'.
+Forma sobrecarregada que já inicia configurando os valores de seus atributos.
+
+Uma abordagem sobre programação Java - Geraldo César Cantelli
+
+
+
+ EXEMPLOS
+
+
+
+public class Example {
+    private int number;
+
+    // Construtor vazio -->
+
+    public Example(){
+
+    }
+
+    // Construtor com parâmetro instanciado (iniciando configurando o valor do atributo) -->
+
+    public Example(int number){
+        this.number = number;
+    }

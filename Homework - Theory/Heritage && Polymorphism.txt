@@ -1,0 +1,49 @@
+- Herança
+Baseia-se no conteito de algo que passa de alguém pra outrem ou de um lugar pra outrem,
+buscando evitar redundâncias e repetições desnecessárias no código além de economizar tempo.
+
+- Polimorfismo
+É uma forma de aplicar o conceito de herança.
+Sua aplicação se dá ao fato de que um sistema deve se comportar diferentemente e de acordo com a necessidade do momento.
+
+Uma abordagem sobre programação Java - Geraldo César Cantelli  
+
+
+
+ // EXEMPLOS
+
+
+
+public abstract class Animal {
+     public void eat() {
+          System.out.println( "Animal eating..." );
+     }
+}
+
+
+public class Dog extends Animal {
+     public void eat() {
+          System.out.println( "Dog eating..." );
+     }
+}
+
+
+public class Cat extends Animal {
+     public void eat() {
+          System.out.println( "Cat eating..." );
+     }
+}
+
+  // Baseado nas classes acima, temos a chamada de método com polimorfismo -->
+
+public class Test {
+  public void doEat( Animal animal ) {
+       animal.eat();
+  }
+  public static void main( String[] args ) {
+        Test t = new Test();
+        t.doEat( new Animal() );
+        t.doEat( new Dog() );
+        t.doEat( new Cat() );
+   }
+}

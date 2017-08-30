@@ -1,0 +1,56 @@
+- Método
+É um membro da classe responsável por implementar uma ação utilizável por um objeto ou classe.
+
+- Sobrecarga de métodos
+É um conceito do polimorfismo que consiste em criar variações de um mesmo método, 
+como a criação de dois ou mais métodos com nomes igual em uma classe, com argumentos diferentes para a separação dos mesmos.
+
+Uma abordagem sobre programação Java - Geraldo César Cantelli
+
+
+
+ // EXEMPLOS
+
+
+
+public class OverloadMethod {
+    private String name;
+
+    // Construtor vazio -->
+
+    public MethodsOverload(){
+
+    }
+
+    // Método 'setName' para definir o atributo 'name' normal -->
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    // Método 'setName' para definir 'name' com 'lastname' (overload) -->
+
+    public void setName(String name, String lastname){
+        this.name = name + " " + lastname;
+    }
+
+    // Método 'getName' para retornar o valor -->
+
+    public String getName(){
+        return name;
+    }
+}
+
+
+ // MAIN
+
+
+public class Main {
+    public static void main(String[] args){
+        OverloadMethod om = new OverloadMethod();
+        m.setName("Wellisson");
+        System.out.println(m.getName());
+        m.setName("Wellisson", "Nunes");
+        System.out.println(m.getName());
+    }
+}
